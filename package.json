@@ -1,0 +1,31 @@
+{
+  "name": "react-native-adapter",
+  "version": "1.0.0",
+  "description": "A library that can help you adapt your rn project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronBank/react-native-adapter.git"
+  },
+  "keywords": [
+    "rn-adapter",
+    "react-native",
+    "ios",
+    "android",
+    "iphone-x",
+    "iphoneX",
+    "stylesheet"
+  ],
+  "author": "Aaron Shen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AaronBank/react-native-adapter/issues"
+  },
+  "homepage": "hhttps://github.com/AaronBank/react-native-adapter#readme",
+  "peerDependencies": {
+    "react-native": ">=0.42.0"
+  }
+}
