@@ -38,16 +38,14 @@ const isIPhoneX = () => (
     ((deviceHeight === 812 || deviceWidth === 812) || (deviceHeight === 896 || deviceWidth=== 896))
 )
 
-const isObject = data => ({}).toString.call(data) === '[object Object]'
 const isFunction = data => typeof data === 'function'
 
 const ifIPhoneX = (iphoneXStyle, iosStyle, androidStyle) => {
-    iphoneXStyle = isObject(iphoneXStyle) ? iphoneXStyle : isFunction(iphoneXStyle) ? iphoneXStyle() : {}
-    iosStyle = isObject(iosStyle) ? iosStyle : isFunction(iosStyle) ? iosStyle() : {}
-    androidStyle = isObject(androidStyle) ? androidStyle : isFunction(androidStyle) ? androidStyle() : {}
+    iphoneXStyle = isFunction(iphoneXStyle) ? iphoneXStyle() : iphoneXStyle
+    iosStyle = isFunction(iosStyle) ? iosStyle() : iosStyle
+    androidStyle = isFunction(androidStyle) ? androidStyle() : androidStyle
 
     if (isIPhoneX()) return  iphoneXStyle
-
     if (isIos) return iosStyle
     
     return androidStyle
@@ -56,8 +54,8 @@ const ifIPhoneX = (iphoneXStyle, iosStyle, androidStyle) => {
 const isHorizontal = () => (deviceWidth > deviceHeight)
 
 const ifHorizontal = (horizontalStyle, verticalStyle) => {
-    horizontalStyle = isObject(horizontalStyle) ? horizontalStyle : isFunction(horizontalStyle) ? horizontalStyle() : {}
-    verticalStyle = isObject(verticalStyle) ? verticalStyle : isFunction(verticalStyle) ? verticalStyle() : {}
+    horizontalStyle = isFunction(horizontalStyle) ? horizontalStyle() : horizontalStyle
+    verticalStyle = isFunction(verticalStyle) ? verticalStyle() : verticalStyle
 
     if (isHorizontal()) return horizontalStyle
 
@@ -69,7 +67,7 @@ const getStatusBarHeight = safe => Platform.select({
     android: StatusBar.currentHeight
 })
 
-const getBottomSpace = () => ifIPhoneX() ? 34 : 0
+const getBottomSpace = () => isIPhoneX() ? 34 : 0
 
 class MySafeAreaView extends Component {
     render() {

@@ -1,5 +1,5 @@
 {
-  "name": "react-native-adapter",
+  "name": "react-native-style-adaptive",
   "version": "1.0.0",
   "description": "A library that can help you adapt your rn project",
   "main": "index.js",
