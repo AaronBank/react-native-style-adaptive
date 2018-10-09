@@ -99,6 +99,8 @@ const SafeAreaView = RN.SafeAreaView || MySafeAreaView
 export {
     initSize,
     pixelRatio,
+    deviceWidth,
+    deviceHeight,
     dp2px,
     px2dp,
     isIPhoneX,
