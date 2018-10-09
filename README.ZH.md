@@ -1,7 +1,13 @@
 
-
 # react-native-style-adaptive
-一个可以帮助你快速开发样式的兼容插件
+
+[中文文档](./) | [英文文档](./README.md)
+
+![](https://img.shields.io/badge/licence-MIT-%2332CD32.svg) ![](https://img.shields.io/badge/npm-6.4.1-%2332CD32.svg) ![](https://img.shields.io/badge/react--native-%3E%3D0.42.0-%234169E1.svg)
+
+一个帮助你快速适配IOS、安卓不同设备样式的工具类库。
+实现了一些方便的适配工具方法。并对RN低版本SafeAreaView组件进行了兼容性处理
+
 
 ## Installing ##
 `npm install react-native-style-adaptive --save`
@@ -388,8 +394,9 @@ export default class MyApp extends Component {
 
 **validity check**
 
+![](http://qiniu.h1z166.com//file/2018/10/b1eae095aee94181b42f93dc37f8aa5c_WX201810091133532x.png) 
 
-
+![](http://qiniu.h1z166.com//file/2018/10/c80e700a674c43d79c4079ffa625d99c_WX201810091135062x.png) 
 
 ## Licence ##
 **MIT**
