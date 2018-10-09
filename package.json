@@ -1,6 +1,6 @@
 {
   "name": "react-native-style-adaptive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library that can help you adapt your rn project",
   "main": "index.js",
   "scripts": {

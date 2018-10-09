@@ -1,7 +1,7 @@
 
 # react-native-style-adaptive
 
-[中文文档](./) | [英文文档](./README.md)
+[中文文档](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.ZH.md) | [英文文档](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.md)
 
 ![](https://img.shields.io/badge/licence-MIT-%2332CD32.svg) ![](https://img.shields.io/badge/npm-6.4.1-%2332CD32.svg) ![](https://img.shields.io/badge/react--native-%3E%3D0.42.0-%234169E1.svg)
 
