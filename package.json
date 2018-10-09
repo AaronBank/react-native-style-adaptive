@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AaronBank/react-native-adapter.git"
+    "url": "git+https://github.com/AaronBank/react-native-style-adaptive.git"
   },
   "keywords": [
     "rn-adapter",
@@ -22,9 +22,9 @@
   "author": "Aaron Shen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AaronBank/react-native-adapter/issues"
+    "url": "https://github.com/AaronBank/react-native-style-adaptive/issues"
   },
-  "homepage": "hhttps://github.com/AaronBank/react-native-adapter#readme",
+  "homepage": "hhttps://github.com/AaronBank/react-native-style-adaptive#readme",
   "peerDependencies": {
     "react-native": ">=0.42.0"
   }

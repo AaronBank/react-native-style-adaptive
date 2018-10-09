@@ -1,5 +1,5 @@
 # react-native-style-adaptive
-A library to help you design your react-native app for the iPhone X, XS, XS Max & XR
+A compatible plugin that helps you quickly develop styles
 
 ## Installing ##
 `npm install react-native-style-adaptive --save`
@@ -7,43 +7,43 @@ A library to help you design your react-native app for the iPhone X, XS, XS Max 
 ## API ##
 
 ### initSize(size: Number) ###
-设置设计图尺寸，默认750px
+Set the design size, default 750px
 
-#### pixelRatio ####
-获取当前设备像素密度
+#### pixelRatio() ####
+Get the current device pixel density
 
-#### deviceWidth ####
-获取当前设备真实宽度
+#### deviceWidth() ####
+Get the current width of the device
 
-#### deviceHeight ####
-获取当前设备真实高度
+#### deviceHeight() ####
+Get the current height of the device
 
 ### dp2px(dp: Number) ###
-将dp转化为px
+Convert dp to px
 
 ### px2dp(px: Number) ###
-将px转化为dp
+Convert px to dp
 
 ### isIPhoneX() ###
-判断是否为iphonex设备
+Determine if it is an iphonex device
 
-### ifIPhoneX() ###
-为ios iphonex android单独定制样式
+### ifIPhoneX(iphoneXStyle, iosStyle, androidStyle) ###
+Custom style for different models of ios iphonex android
 
 ### isHorizontal() ###
-判断是被是否为横屏
+Determine if the current device is in the horizontal screen state
 
-### ifHorizontal() ###
-根据设备屏幕方向单独定制样式
+### ifHorizontal(horizontalStyle, verticalStyle) ###
+Customize the style according to the orientation of the device screen
 
-### getStatusBarHeight() ###
-获取当前设备statusBar高度
+### getStatusBarHeight(safe) ###
+Get the current device statusBar height
 
 ### getBottomSpace() ###
-获取设备底部安全高度
+Get the safe height at the bottom of the device
 
 ### SafeAreaView ###
-兼容组件SafeAreaView
+Compatible component SafeAreaView
 
 
 ```js
