@@ -179,7 +179,7 @@ console.log(isIPhoneX()) //=> false
 **Parameters**
 
 iphoneXOptions - When the device is `iphonex`, the parameter can be a function type.
-iosOptions - When the device ** is not the style of `iphonex`'s ʻios` device**, the parameter can be a function type
+iosOptions - When the device is not the style of `iphonex`'s ʻios` device, the parameter can be a function type
 androidOptions - When the device is in the style of `android`, the parameter can be a function type.
 
 **Example**
@@ -393,11 +393,8 @@ export default class MyApp extends Component {
 
 ```
 
-**validity check**
-
+**reaact-native 0.44.3 validity check**
 ![](http://qiniu.h1z166.com//file/2018/10/b1eae095aee94181b42f93dc37f8aa5c_WX201810091133532x.png) 
-
-![](http://qiniu.h1z166.com//file/2018/10/c80e700a674c43d79c4079ffa625d99c_WX201810091135062x.png) 
 
 ## Licence ##
 **MIT**
