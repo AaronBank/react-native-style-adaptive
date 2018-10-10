@@ -2,7 +2,7 @@
 
 # react-native-style-adaptive
 
-[Chinese](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.ZH.md) | [English](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.md)
+[Chinese](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.ZH.md) | [English](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.md)
 
 ![](https://img.shields.io/badge/licence-MIT-%2332CD32.svg) ![](https://img.shields.io/badge/npm-6.4.1-%2332CD32.svg) ![](https://img.shields.io/badge/react--native-%3E%3D0.42.0-%234169E1.svg)
 
@@ -252,7 +252,7 @@ console.log(isIPhoneX()) //=> false
 ---
 
 ### ifHorizontal(horizontalOptions, [verticalOptions]) ###
-> Customize styles based on device screen orientation, accepting any type of parameters, including functions
+> Customize styles based on device screen orientation, accepting any type of parameters, including functions
 
 **Parameters**
 
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
 
 ```javascript
 import React, { Component } from 'react'
-import { SafeAreaView } from './adapter'
+import { SafeAreaView } from 'react-native-style-adaptive'
 
 export default class MyApp extends Component {
   render() {
