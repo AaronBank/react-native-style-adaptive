@@ -1,7 +1,7 @@
 
 # react-native-style-adaptive
 
-[中文文档](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.ZH.md) | [英文文档](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.md)
+[中文文档](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.ZH.md) | [英文文档](https://github.com/AaronBank/react-native-style-adapter/blob/master/README.md)
 
 ![](https://img.shields.io/badge/licence-MIT-%2332CD32.svg) ![](https://img.shields.io/badge/npm-6.4.1-%2332CD32.svg) ![](https://img.shields.io/badge/react--native-%3E%3D0.42.0-%234169E1.svg)
 
@@ -32,7 +32,7 @@ console.log(pixelRatio) //=> 2
 ---
 
 ### originalWidth() ###
-> 获取当前设备竖屏状态下的宽度, 与屏幕是否旋转无关
+> 获取当前设备竖屏状态下的宽度, 与屏幕是否旋转无关
 
 **Example**
 
@@ -48,7 +48,7 @@ console.log(originalWidth()) //=> 375
 ---
 
 ### originalHeight() ###
-> 获取当前设备竖屏状态下的高度, 与屏幕是否旋转无关
+> 获取当前设备竖屏状态下的高度, 与屏幕是否旋转无关
 
 **Example**
 
@@ -80,7 +80,7 @@ initSize(640)
 
 ```
 
-**returns** - 返回设置后的设计稿大小,一般没什么用
+**returns** - 返回设置后的设计稿大小,一般没什么用
 
 ---
 
@@ -128,7 +128,7 @@ dp - 需要计算的dp值（不带单位）
 ```javascript
 import { dp2px } from 'react-native-style-adaptive'
 
-// 传入当前dp值，返回计算后的px值
+// 传入当前dp值，返回计算后的px值
 console.log(dp2px(375)) //=> 750
 
 ```
@@ -148,7 +148,7 @@ px - 需要计算的px值（不带单位）
 ```javascript
 import { px2dp } from 'react-native-style-adaptive'
 
-// 传入当前px值，返回计算后的dp值
+// 传入当前px值，返回计算后的dp值
 console.log(px2dp(750)) //=> 375
 
 ```
@@ -251,7 +251,7 @@ console.log(isIPhoneX()) //=> false
 ---
 
 ### ifHorizontal(horizontalOptions, [verticalOptions]) ###
-> 根据设备屏幕方向单独定制样式, 可接受任意类型参数，包括函数
+> 根据设备屏幕方向单独定制样式, 可接受任意类型参数，包括函数
 
 **Parameters**
 
@@ -337,7 +337,7 @@ const styles = StyleSheet.create({
 
 ```
 
-**returns** - 返回statusBar高度：横屏状态下iphonex安全高度为`44`，不安全高度为`30`，竖屏状态iphonex返回statusBar高度均为`0`, 下其他ios设备均为`20`，android设备返回当前设备`statusBar`高度
+**returns** - 返回statusBar高度：横屏状态下iphonex安全高度为`44`，不安全高度为`30`，竖屏状态iphonex返回statusBar高度均为`0`, 下其他ios设备均为`20`，android设备返回当前设备`statusBar`高度
 
 ---
 
@@ -376,7 +376,7 @@ const styles = StyleSheet.create({
 
 ```javascript
 import React, { Component } from 'react'
-import { SafeAreaView } from './adapter'
+import { SafeAreaView } from 'react-native-style-adaptive'
 
 export default class MyApp extends Component {
   render() {
