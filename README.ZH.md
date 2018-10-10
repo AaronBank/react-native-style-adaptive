@@ -394,9 +394,7 @@ export default class MyApp extends Component {
 
 **validity check**
 
-![](http://qiniu.h1z166.com//file/2018/10/b1eae095aee94181b42f93dc37f8aa5c_WX201810091133532x.png) 
-
-![](http://qiniu.h1z166.com//file/2018/10/c80e700a674c43d79c4079ffa625d99c_WX201810091135062x.png) 
+![](http://qiniu.h1z166.com//file/2018/10/b1eae095aee94181b42f93dc37f8aa5c_WX201810091133532x.png)
 
 ## Licence ##
 **MIT**
