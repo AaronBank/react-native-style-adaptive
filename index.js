@@ -4,7 +4,9 @@ import RN, {
     Dimensions,
     PixelRatio,
     Platform,
-    StatusBar
+    UIManager,
+    StatusBar,
+    findNodeHandle
 } from 'react-native'
 
 const designWidth = 750
@@ -97,37 +99,64 @@ export const getStatusBarHeight = safe => Platform.select({
 export const getBottomSpace = () => isIPhoneX() ? ifHorizontal(21, 34) : 0
 
 class MySafeAreaView extends Component {
-    constructor () {
-        super()
-        this.state = { deviceWidth: deviceWidth() }
+    constructor (props) {
+        super(props)
+        this.state = { 
+            deviceWidth: deviceWidth(),
+            children: props.children
+        }
         this._monitoring = this._monitoring.bind(this)
+        this.children = props.children
     }
 
     render() {
-        const container = ifIPhoneX(() => ifHorizontal({
-            paddingBottom: 21,
-            paddingHorizontal: 44
-        }, {
-            paddingTop: 44,
-            paddingBottom: 34
-        }))
         const { style, children } = this.props
 
         return (
             <View
                 { ...this.props }
-                style={ [container, style] }
+                style={ [style, this._container()] }
                 onLayout={ this._monitoring }
+                ref={ ref => this.container = ref }
             >
-                { children }
+                {children}
             </View>
         )
+    }
+
+    _container () {
+        return ifIPhoneX(() => ifHorizontal({
+            paddingHorizontal: 44
+        }, {
+            paddingTop: 44
+        }))
+    }
+
+    _calculation (e) {
+        const currentWindow = e.nativeEvent.layout
+        const currentDeviceHeight = deviceHeight()
+
+        const correctHeight = currentDeviceHeight - getStatusBarHeight() - getBottomSpace()
+        const currentHeight = ifHorizontal(() => currentWindow.width, () => currentWindow.height)
+
+        if (currentHeight >= correctHeight) {
+            
+            ifIPhoneX(() => {
+                this.container.setNativeProps({
+                    style: {
+                        paddingBottom: getBottomSpace()
+                    }
+                })
+            })
+        }
     }
 
     _monitoring (e) {
         this.props.onLayout && this.props.onLayout(e)
 
         const currentDeviceWidth = deviceWidth()
+
+        this._calculation(e)
 
         if (currentDeviceWidth !== this.state.deviceWidth) {
             this.setState({
