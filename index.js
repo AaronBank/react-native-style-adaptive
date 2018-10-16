@@ -4,9 +4,8 @@ import RN, {
     Dimensions,
     PixelRatio,
     Platform,
-    UIManager,
     StatusBar,
-    findNodeHandle
+    StyleSheet
 } from 'react-native'
 
 const designWidth = 750
