@@ -15,55 +15,6 @@ Some convenient adaptation tool methods have been implemented. And compatibility
 
 ## API ##
 
-#### pixelRatio ####
-> Read only: Get the current device pixel density
-
-**Example**
-
-```javascript
-
-import { pixelRatio } from 'react-native-style-adaptive'
-
-// Take iphone6 as an example
-console.log(pixelRatio) //=> 2
-
-```
-**returns** - Returns the current device pixel density value
-
----
-
-### originalWidth() ###
-> Get the width of the current device? in portrait mode, regardless of whether the screen is rotated or not
-
-**Example**
-
-```javascript
-import { originalWidth } from 'react-native-style-adaptive'
-
-// Take iphone6 as an example
-console.log(originalWidth()) //=> 375
-
-```
-**returns** - Returns the width of the current device in portrait mode, regardless of whether the screen is rotated or not
-
----
-
-### originalHeight() ###
-> Get the height of the current device? in portrait mode, regardless of whether the screen is rotated or not
-
-**Example**
-
-```javascript
-import { originalHeight } from 'react-native-style-adaptive'
-
-// Take iphone6 as an example
-console.log(originalHeight()) //=> 667
-
-```
-**returns** - Returns the height of the current device in portrait mode, regardless of whether the screen is rotated or not
-
----
-
 ### initSize(size: Number) ###
 > Set the design size
 
@@ -82,58 +33,6 @@ initSize(640)
 ```
 
 **returns** - Return? The size of the design draft after setting is generally useless.
-
----
-
-#### deviceWidth() ####
-> Get the current device width, related to whether the screen is rotated
-
-**Example**
-
-```javascript
-import { deviceWidth } from 'react-native-style-adaptive'
-
-// Take iphone6 as an example
-console.log(deviceWidth()) //=> 375
-
-```
-**returns** - Returns the current width value of the device, whether relating to rotation of the screen, the return value of the landscape? Height of the apparatus
-
----
-
-#### deviceHeight ####
-> Get the current device height, related to whether the screen is rotated
-
-**Example**
-
-```javascript
-import { deviceHeight } from 'react-native-style-adaptive'
-
-// Take iphone6 as an example
-console.log(deviceHeight()) //=> 667
-
-```
-**returns** - Returns the current equipment, whether relating to rotation of the screen, the return value of the landscape? Device width
-
----
-
-### dp2px(dp: Number) ###
-> Convert dp to px
-
-**Parameters**
-
-dp - The dp value to be calculated (without units)
-
-**Example**
-
-```javascript
-import { dp2px } from 'react-native-style-adaptive'
-
-// Pass in the current ?dp value and return the calculated px value
-console.log(dp2px(375)) //=> 750
-
-```
-**returns** - Returns the value of px after calculation
 
 ---
 
@@ -157,8 +56,150 @@ console.log(px2dp(750)) //=> 375
 
 ---
 
-### isIPhoneX() ###
-> Determine if it is an iphonex device
+### dp2px(dp: Number) ###
+> Convert dp to px
+
+**Parameters**
+
+dp - The dp value to be calculated (without units)
+
+**Example**
+
+```javascript
+import { dp2px } from 'react-native-style-adaptive'
+
+// Pass in the current ?dp value and return the calculated px value
+console.log(dp2px(375)) //=> 750
+
+```
+**returns** - Returns the value of px after calculation
+
+---
+
+### pixelRatio ###
+> Read only: Get the current device pixel density
+
+**Example**
+
+```javascript
+
+import { pixelRatio } from 'react-native-style-adaptive'
+
+// Take iphone6 as an example
+console.log(pixelRatio) //=> 2
+
+```
+**returns** - Returns the current device pixel density value
+
+---
+
+### originalWidth ###
+> Read only: Get the width of the current device? in portrait mode, regardless of whether the screen is rotated or not
+
+**Example**
+
+```javascript
+import { originalWidth } from 'react-native-style-adaptive'
+
+// Take iphone6 as an example
+console.log(originalWidth) //=> 375
+
+```
+**returns** - Returns the width of the current device in portrait mode, regardless of whether the screen is rotated or not
+
+---
+
+### originalHeight ###
+> Read only: Get the height of the current device? in portrait mode, regardless of whether the screen is rotated or not
+
+**Example**
+
+```javascript
+import { originalHeight } from 'react-native-style-adaptive'
+
+// Take iphone6 as an example
+console.log(originalHeight) //=> 667
+
+```
+**returns** - Returns the height of the current device in portrait mode, regardless of whether the screen is rotated or not
+
+---
+
+
+
+### deviceWidth() ###
+> Get the current device width, related to whether the screen is rotated
+
+**Example**
+
+```javascript
+import { deviceWidth } from 'react-native-style-adaptive'
+
+// Take iphone6 as an example
+console.log(deviceWidth()) //=> 375
+
+```
+**returns** - Returns the current width value of the device, whether relating to rotation of the screen, the return value of the landscape? Height of the apparatus
+
+---
+
+### deviceHeight() ###
+> Get the current device height, related to whether the screen is rotated
+
+**Example**
+
+```javascript
+import { deviceHeight } from 'react-native-style-adaptive'
+
+// Take iphone6 as an example
+console.log(deviceHeight()) //=> 667
+
+```
+**returns** - Returns the current equipment, whether relating to rotation of the screen, the return value of the landscape? Device width
+
+---
+
+
+
+
+
+
+
+
+### isPad ###
+> Read only: Determine if it is an iPad device
+
+**Example**
+
+```javascript
+import { isPad } from 'react-native-style-adaptive'
+
+// Assume that the current device is an iphone6 device.
+console.log(isPad) //=> false
+
+```
+**returns** - Return the judgment result, the iPad device returns true, the other returns false
+
+---
+
+### isTVOS ###
+> Read only: Determine if it is an TVOS device
+
+**Example**
+
+```javascript
+import { isTVOS } from 'react-native-style-adaptive'
+
+// Assume that the current device is an iphone6 device.
+console.log(isTVOS) //=> false
+
+```
+**returns** - Return the judgment result, the TVOS device returns true, the other returns false
+
+---
+
+### isIPhoneX ###
+> Read only: Determine if it is an iphonex device
 
 **Example**
 
@@ -166,7 +207,7 @@ console.log(px2dp(750)) //=> 375
 import { isIPhoneX } from 'react-native-style-adaptive'
 
 // Assume that the current device is an iphone6 device.
-console.log(isIPhoneX()) //=> false
+console.log(isIPhoneX) //=> false
 
 ```
 **returns** - Return the judgment result, the iphonex device returns true, the other returns false
@@ -244,7 +285,7 @@ const styles = StyleSheet.create({
 import { isHorizontal } from 'react-native-style-adaptive'
 
 // Assume that the current device orientation is vertical
-console.log(isHorizontal()) //=> false
+console.log(isIPhoneX()) //=> false
 
 ```
 **returns** - Returns the result of the judgment, the device returns true when the screen is horizontal, and the other returns false

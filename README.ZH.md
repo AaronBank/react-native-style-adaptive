@@ -14,55 +14,6 @@
 
 ## API ##
 
-#### pixelRatio ####
-> 只读属性：获取当前设备像素密度
-
-**Example**
-
-```javascript
-
-import { pixelRatio } from 'react-native-style-adaptive'
-
-// 以iphone6为例
-console.log(pixelRatio) //=> 2
-
-```
-**returns** - 返回当前设备像素密度值
-
----
-
-### originalWidth() ###
-> 获取当前设备竖屏状态下的宽度, 与屏幕是否旋转无关
-
-**Example**
-
-```javascript
-import { originalWidth } from 'react-native-style-adaptive'
-
-// 设置设计稿为iphone5
-console.log(originalWidth()) //=> 375
-
-```
-**returns** - 返回当前设备竖屏状态下的宽度, 与屏幕是否旋转无关
-
----
-
-### originalHeight() ###
-> 获取当前设备竖屏状态下的高度, 与屏幕是否旋转无关
-
-**Example**
-
-```javascript
-import { originalHeight } from 'react-native-style-adaptive'
-
-// 设置设计稿为iphone5
-console.log(originalHeight()) //=> 667
-
-```
-**returns** - 返回当前设备竖屏状态下的高度, 与屏幕是否旋转无关
-
----
-
 ### initSize(size: Number) ###
 > 设置设计图尺寸
 
@@ -81,58 +32,6 @@ initSize(640)
 ```
 
 **returns** - 返回设置后的设计稿大小,一般没什么用
-
----
-
-#### deviceWidth() ####
-> 获取当前设备宽度, 与屏幕是否旋转有关
-
-**Example**
-
-```javascript
-import { deviceWidth } from 'react-native-style-adaptive'
-
-// 以iphone6为例
-console.log(deviceWidth()) //=> 375
-
-```
-**returns** - 返回当前设备宽度值, 与屏幕是否旋转有关, 横屏状态下返回值为设备高度
-
----
-
-#### deviceHeight ####
-> 获取当前设备高度, 与屏幕是否旋转有关
-
-**Example**
-
-```javascript
-import { deviceHeight } from 'react-native-style-adaptive'
-
-// 以iphone6为例
-console.log(deviceHeight()) //=> 667
-
-```
-**returns** - 返回当前设备高度值, 与屏幕是否旋转有关, 横屏状态下返回值为设备宽度
-
----
-
-### dp2px(dp: Number) ###
-> 将dp转化为px
-
-**Parameters**
-
-dp - 需要计算的dp值（不带单位）
-
-**Example**
-
-```javascript
-import { dp2px } from 'react-native-style-adaptive'
-
-// 传入当前dp值，返回计算后的px值
-console.log(dp2px(375)) //=> 750
-
-```
-**returns** - 返回计算后px的值
 
 ---
 
@@ -156,8 +55,141 @@ console.log(px2dp(750)) //=> 375
 
 ---
 
-### isIPhoneX() ###
-> 判断是否为iphonex设备
+### dp2px(dp: Number) ###
+> 将dp转化为px
+
+**Parameters**
+
+dp - 需要计算的dp值（不带单位）
+
+**Example**
+
+```javascript
+import { dp2px } from 'react-native-style-adaptive'
+
+// 传入当前dp值，返回计算后的px值
+console.log(dp2px(375)) //=> 750
+
+```
+**returns** - 返回计算后px的值
+
+---
+
+### pixelRatio ###
+> 只读属性：获取当前设备像素密度
+
+**Example**
+
+```javascript
+
+import { pixelRatio } from 'react-native-style-adaptive'
+
+// 以iphone6为例
+console.log(pixelRatio) //=> 2
+
+```
+**returns** - 返回当前设备像素密度值
+
+---
+
+### originalWidth ###
+> 只读属性：获取当前设备竖屏状态下的宽度, 与屏幕是否旋转无关
+
+**Example**
+
+```javascript
+import { originalWidth } from 'react-native-style-adaptive'
+
+// 设置设计稿为iphone5
+console.log(originalWidth()) //=> 375
+
+```
+**returns** - 返回当前设备竖屏状态下的宽度, 与屏幕是否旋转无关
+
+---
+
+### originalHeight ###
+> 只读属性：获取当前设备竖屏状态下的高度, 与屏幕是否旋转无关
+
+**Example**
+
+```javascript
+import { originalHeight } from 'react-native-style-adaptive'
+
+// 设置设计稿为iphone5
+console.log(originalHeight()) //=> 667
+
+```
+**returns** - 返回当前设备竖屏状态下的高度, 与屏幕是否旋转无关
+
+---
+
+### deviceWidth() ###
+> 获取当前设备宽度, 与屏幕是否旋转有关
+
+**Example**
+
+```javascript
+import { deviceWidth } from 'react-native-style-adaptive'
+
+// 以iphone6为例
+console.log(deviceWidth()) //=> 375
+
+```
+**returns** - 返回当前设备宽度值, 与屏幕是否旋转有关, 横屏状态下返回值为设备高度
+
+---
+
+### deviceHeight() ###
+> 获取当前设备高度, 与屏幕是否旋转有关
+
+**Example**
+
+```javascript
+import { deviceHeight } from 'react-native-style-adaptive'
+
+// 以iphone6为例
+console.log(deviceHeight()) //=> 667
+
+```
+**returns** - 返回当前设备高度值, 与屏幕是否旋转有关, 横屏状态下返回值为设备宽度
+
+---
+
+### isPad ###
+> 只读属性：判断是否为iPad设备
+
+**Example**
+
+```javascript
+import { isPad } from 'react-native-style-adaptive'
+
+// 假设当前设备为iphone6设备
+console.log(isPad) //=> false
+
+```
+**returns** - 返回判断结果，iPad设备返回true，其他返回false
+
+---
+
+### isTVOS ###
+> 只读属性：判断是否为ios TVOS设备
+
+**Example**
+
+```javascript
+import { isTVOS } from 'react-native-style-adaptive'
+
+// 假设当前设备为iphone6设备
+console.log(isTVOS) //=> false
+
+```
+**returns** - 返回判断结果，TVOS设备返回true，其他返回false
+
+---
+
+### isIPhoneX ###
+> 只读属性：判断是否为iphonex设备
 
 **Example**
 
@@ -165,7 +197,7 @@ console.log(px2dp(750)) //=> 375
 import { isIPhoneX } from 'react-native-style-adaptive'
 
 // 假设当前设备为iphone6设备
-console.log(isIPhoneX()) //=> false
+console.log(isIPhoneX) //=> false
 
 ```
 **returns** - 返回判断结果，iphonex设备返回true，其他返回false
