@@ -8,7 +8,7 @@ import RN, {
     StyleSheet
 } from 'react-native'
 
-const designWidth = 750
+let designWidth = 750
 
 const isIos = Platform.OS === 'ios'
 

@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
 import { isHorizontal } from 'react-native-style-adaptive'
 
 // Assume that the current device orientation is vertical
-console.log(isIPhoneX()) //=> false
+console.log(isHorizontal()) //=> false
 
 ```
 **returns** - Returns the result of the judgment, the device returns true when the screen is horizontal, and the other returns false

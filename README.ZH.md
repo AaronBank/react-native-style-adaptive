@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
 import { isHorizontal } from 'react-native-style-adaptive'
 
 // 假设当前设备方向为竖屏
-console.log(isIPhoneX()) //=> false
+console.log(isHorizontal()) //=> false
 
 ```
 **returns** - 返回判断结果，设备横屏时返回true，其他返回false
