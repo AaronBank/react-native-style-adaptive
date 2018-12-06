@@ -156,6 +156,38 @@ console.log(deviceHeight()) //=> 667
 
 ---
 
+### isIos ###
+> 只读属性：判断是否为ios设备
+
+**Example**
+
+```javascript
+import { isIos } from 'react-native-style-adaptive'
+
+// 假设当前设备为iphone设备
+console.log(isIos) //=> true
+
+```
+**returns** - 返回判断结果，ios设备返回true，反之返回false
+
+---
+
+### isAndroid ###
+> 只读属性：判断是否为android设备
+
+**Example**
+
+```javascript
+import { isAndroid } from 'react-native-style-adaptive'
+
+// 假设当前设备为iphone设备
+console.log(isAndroid) //=> false
+
+```
+**returns** - 返回判断结果，android设备返回true，反之返回false
+
+---
+
 ### isPad ###
 > 只读属性：判断是否为iPad设备
 
@@ -185,6 +217,21 @@ console.log(isTVOS) //=> false
 
 ```
 **returns** - 返回判断结果，TVOS设备返回true，其他返回false
+
+---
+
+### Version ###
+> 只读属性：检测当前所运行的Android平台的版本
+
+**Example**
+
+```javascript
+import { Version } from 'react-native-style-adaptive'
+
+console.log(Version) //=> 21
+
+```
+**returns** - 返回当前所运行的Android平台的版本
 
 ---
 

@@ -1,4 +1,4 @@
-export { isIos, isAndroid, isPad, isTVOS } from './utils'
+export { isIos, isAndroid, isPad, isTVOS, Version } from './utils'
 export { initSize, dp2px, px2dp } from './conversion'
 export { default as SafeAreaView } from './SafeAreaView'
 

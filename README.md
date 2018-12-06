@@ -125,8 +125,6 @@ console.log(originalHeight) //=> 667
 
 ---
 
-
-
 ### deviceWidth() ###
 > Get the current device width, related to whether the screen is rotated
 
@@ -159,12 +157,37 @@ console.log(deviceHeight()) //=> 667
 
 ---
 
+### isIos ###
+> Read only: Determine if it is an Ios device
 
+**Example**
 
+```javascript
+import { isIos } from 'react-native-style-adaptive'
 
+// Assume that the current device is an iphone device.
+console.log(isIos) //=> true
 
+```
+**returns** - Return the judgment result, the Ios device returns true, the other returns false
 
+---
 
+### isAndroid ###
+> Read only: Determine if it is an Android device
+
+**Example**
+
+```javascript
+import { isAndroid } from 'react-native-style-adaptive'
+
+// Assume that the current device is an iphone device.
+console.log(isAndroid) //=> false
+
+```
+**returns** - Return the judgment result, the Android device returns true, the other returns false
+
+---
 
 ### isPad ###
 > Read only: Determine if it is an iPad device
@@ -195,6 +218,21 @@ console.log(isTVOS) //=> false
 
 ```
 **returns** - Return the judgment result, the TVOS device returns true, the other returns false
+
+---
+
+### Version ###
+> Read only: Detect the version of the currently running Android platform
+
+**Example**
+
+```javascript
+import { Version } from 'react-native-style-adaptive'
+
+console.log(Version) //=> 21
+
+```
+**returns** - Returns the version of the currently running Android platform
 
 ---
 
