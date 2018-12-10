@@ -8,7 +8,7 @@ const _isFunction = data => typeof data === 'function'
 
 const _processor = (...args) => args.map((item) => _isFunction(item) ? item() : item)
 
-const { OS, isPad, isTVOS, Version, elect : _select } = Platform
+const { OS, isPad, isTVOS, Version, select: _select } = Platform
 
 const isIos = OS === 'ios'
 
