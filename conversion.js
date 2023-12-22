@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { originalWidth } from './device'
-import { isIos } from './utils'
+import { isIos, pixelRatio } from './utils'
 
 let designWidth = 750
 
